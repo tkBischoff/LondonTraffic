@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <title>My Template</title>
+  <script src="{% static 'map.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'map.css' %}" />
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhckHN6-AX2g-Yx_k7LGf819Z3L3mLOIY&libraries=visualization&callback=initMap">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+</head>
+<body onload="getTraffic(); window.setInterval(getTraffic, 100000); addClickEvents()">
+  <div id="map"></div>
+</body>
+</html>
