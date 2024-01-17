@@ -7,6 +7,7 @@ class JamCam(models.Model):
     lon = models.FloatField()
 
 
+
 class Capture(models.Model):
     jam_cam = models.ForeignKey(JamCam, on_delete=CASCADE)
     timestamp = models.DateTimeField()
